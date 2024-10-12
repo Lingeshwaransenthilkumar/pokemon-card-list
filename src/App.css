@@ -1,0 +1,31 @@
+
+.main{
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+}
+
+.nav{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.search input{
+  outline: none;
+  border: 1px solid #FFCB05;
+  padding: 5px;
+  border-radius: 5px;
+  margin-right: 30px;
+  color: #FFCB05;
+}
+
+
+
+img{
+  height: 150px;
+}
+.title{
+  color: #FFCB05;
+
+}
