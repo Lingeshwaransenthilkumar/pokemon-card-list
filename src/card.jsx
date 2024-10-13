@@ -4,12 +4,14 @@ import "./card.css";
 // searched data from search bar
 function Card({ searchField }) {
   const [pokemon, setPokemon] = useState([]);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     fetch("https://pokeapi.co/api/v2/pokemon?limit=1025")
       .then((response) => response.json())
       .then((data) => {
         setPokemon(data.results);
+        setLoading(false);
       });
   }, []);
 
@@ -26,6 +28,7 @@ function Card({ searchField }) {
 
   return (
     <div className="card-container">
+      {loading && <div className="loader"></div>}
       {filteredPokemon.map((pokemon) => {
         const pokemonId = getPokemonId(pokemon.url); 
         return (

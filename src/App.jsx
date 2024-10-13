@@ -1,6 +1,7 @@
 import { useState } from "react";
 import "./App.css";
 import Card from "./card";
+import logo from './assets/pokemon-logo.png'
 
 
 function App() {
@@ -17,7 +18,7 @@ function App() {
       <section className="main">
         <div className="nav">
           <div className="logo">
-            <img src="/src/assets/pokemon-logo.png" alt="" />
+            <img src={logo} alt="logo.png" />
           </div>
           <div className="title">
             <h3>Pokemon-list</h3>
