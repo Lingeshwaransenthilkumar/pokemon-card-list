@@ -1,11 +1,12 @@
 import { useState, useEffect } from "react";
 import "./card.css";
 
+// searched data from search bar
 function Card({ searchField }) {
   const [pokemon, setPokemon] = useState([]);
 
   useEffect(() => {
-    fetch("https://pokeapi.co/api/v2/pokemon?limit=151")
+    fetch("https://pokeapi.co/api/v2/pokemon?limit=1025")
       .then((response) => response.json())
       .then((data) => {
         setPokemon(data.results);
